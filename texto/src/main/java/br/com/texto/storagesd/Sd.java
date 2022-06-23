@@ -194,6 +194,7 @@ public class Sd implements SdInterface {
     @Override
     public void processaException(String classe, Exception e) {
         try {
+            e.printStackTrace();
             info(classe);
             erro(e.toString());
             insereLog(e.getStackTrace());
