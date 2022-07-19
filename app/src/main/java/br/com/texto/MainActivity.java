@@ -3,6 +3,7 @@ package br.com.texto;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import br.com.texto.storagesd.Log;
 import br.com.texto.storagesd.StorageSD;
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .build();
 
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aqui();
+            }
+        });
+
 
     }
 
@@ -32,14 +40,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-       aqui();
     }
 
     private void aqui(){
         try{
             int x = 10 / 0;
         }catch (Exception e){
-            StorageSD.processaException(getClass().getSimpleName() + " - "+new Object() {}.getClass().getEnclosingMethod().getName(), e);
+            StorageSD.processaException(getClass(), e);
         }
     }
 }

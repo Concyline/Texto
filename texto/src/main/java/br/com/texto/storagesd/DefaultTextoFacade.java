@@ -77,4 +77,5 @@ public class DefaultTextoFacade implements TextoFacade {
         log.onLog("processaException");
         sd.processaException(classe, e);
     }
+
 }

@@ -24,5 +24,6 @@ public interface TextoFacade {
 
     void insereLog(StackTraceElement[] erro);
 
-    void processaException(String classe, Exception e);
+    void processaException(Class classe, Exception e);
+
 }

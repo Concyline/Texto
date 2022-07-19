@@ -192,10 +192,10 @@ public class Sd implements SdInterface {
     }
 
     @Override
-    public void processaException(String classe, Exception e) {
+    public void processaException(Class classe, Exception e) {
         try {
             e.printStackTrace();
-            info(classe);
+            info(classe.getSimpleName() + " - "+new Object() {}.getClass().getEnclosingMethod().getName());
             erro(e.toString());
             insereLog(e.getStackTrace());
         } catch (Exception ee) {

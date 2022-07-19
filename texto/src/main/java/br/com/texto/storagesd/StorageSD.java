@@ -56,7 +56,7 @@ public class StorageSD {
         textoFacade.insereLog(erro);
     }
 
-    public static void processaException(String classe, Exception e) {
+    public static void processaException(Class classe, Exception e) {
         textoFacade.processaException(classe, e);
     }
 
