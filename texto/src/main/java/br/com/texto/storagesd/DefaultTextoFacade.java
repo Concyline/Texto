@@ -73,7 +73,7 @@ public class DefaultTextoFacade implements TextoFacade {
     }
 
     @Override
-    public void processaException(String classe, Exception e) {
+    public void processaException(Class classe, Exception e) {
         log.onLog("processaException");
         sd.processaException(classe, e);
     }
